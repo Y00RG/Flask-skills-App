@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+
+  {%if css_file %}
+    <link rel="stylesheet" href="{{url_for('static', filename=css_file)}}" />
+  {% endif %}
+
+  <link rel="icon" href="media/sk_image.jpeg">
+</head>
+<body>
+  {% block body %}
+  {% endblock %}
+  <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
